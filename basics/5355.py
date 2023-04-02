@@ -6,12 +6,29 @@
 import sys
 
 test = int(input())
+temp_num = 0
 result = []
 
 for _ in range(test):
     # 개행문자 > \n 같은 문자 제거 함수 rstrip()
-    char = sys.stdin.readline().rstrip()
-    cal = char.split(' ')
+    # char = sys.stdin.readline().rstrip()
+    # cal = char.split(' ')
+
+    char = input()
+    num, oper = char.split(' ')
+    
+    num = int(num)
+
+    if "@" in oper:
+        temp_num = num * 3
+
+    elif "#" in oper:
+        temp_num = num - 7
+    
+    elif "%" in oper:
+        temp_num = num + 5
+
+    result.append(temp_num)
 
 
 for i in range(test):
