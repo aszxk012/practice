@@ -18,5 +18,7 @@ public class java_11718 {
         for(i = 0; i < result.size(); i++){
             System.out.println(result.get(i));
         }
+
+        scanner.close();
     }
 }

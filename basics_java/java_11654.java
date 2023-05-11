@@ -15,5 +15,7 @@ public class java_11654 {
         char s = scanner.nextLine().charAt(0);
         int num = (int)s;
         System.out.println(num);
+
+        scanner.close();
     }
 }

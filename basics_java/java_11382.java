@@ -12,5 +12,7 @@ public class java_11382 {
         long c = scanner.nextLong();
 
         System.out.println(a + b + c);
+
+        scanner.close();
     }
 }

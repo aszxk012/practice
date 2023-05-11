@@ -3,21 +3,23 @@
  * EOF
  */
 
- import java.util.*;
+import java.util.*;
 
- public class java_11719 {
-     public static void main(String[] args){
-         Scanner scanner = new Scanner(System.in);
-         List<String> result = new ArrayList<String>();
+public class java_11719 {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        List<String> result = new ArrayList<String>();
  
-         while (scanner.hasNext()) {
-             result.add(scanner.nextLine());
-         }
+        while (scanner.hasNext()) {
+            result.add(scanner.nextLine());
+        }
  
-         int i;
-         for(i = 0; i < result.size(); i++){
-             System.out.println(result.get(i));
-         }
-     }
+        int i;
+        for(i = 0; i < result.size(); i++){
+            System.out.println(result.get(i));
+        }
+
+        scanner.close();
+    }
  }
  

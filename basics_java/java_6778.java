@@ -19,5 +19,7 @@ public class java_6778 {
         if ((antenna <= 2) && (eyes <= 3)) {
             System.out.println("GraemeMercurian");
         }
+
+        scanner.close();
     }
 }

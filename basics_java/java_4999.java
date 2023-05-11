@@ -20,5 +20,7 @@ public class java_4999 {
         else if(sound.length() < sound_dr.length()) {
             System.out.println("no");
         }
+        
+        scanner.close();
     }
 }
