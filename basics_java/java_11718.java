@@ -10,15 +10,13 @@ public class java_11718 {
         Scanner scanner = new Scanner(System.in);
         List<String> result = new ArrayList<String>();
 
-        while (scanner.hasNext()) {
+        while (scanner.hasNext()){
             result.add(scanner.nextLine());
         }
 
-        int i;
-        for(i = 0; i < result.size(); i++){
+        for(int i = 0; i < result.size(); i++){
             System.out.println(result.get(i));
         }
-
         scanner.close();
     }
 }
