@@ -1,29 +1,32 @@
 /* 9093
  * 문장을 입력했을 때 문장의 단어 뒤집어서 출력하기
  * 추후 수정(2023.05.26)
+ * 수정 완료(2023.06.04)
  */
 
 import java.util.*;
 public class java_9093 {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
-        int count = 0;
+        scanner.nextLine(); // 개행 문자 소비
 
-        while (true){
+        StringBuilder result = new StringBuilder();
+
+        for (int i = 0; i < num; i++) {
             String string = scanner.nextLine();
-            String[] words = string.split(" ");
+            String words[] = string.split(" ");
 
-            for (int i = 0; i < words.length; i++) {
-                for (int j = words[i].length() - 1; i >= 0; i--){
-                    System.out.print(string.charAt(j));
+            for (int j = 0; j < words.length; j++) {
+                for (int k = words[j].length() - 1; k >= 0; k--) {
+                    result.append(words[j].charAt(k));
                 }
+                result.append(' ');
             }
-
-            count++;
-            if (count == num) break;
-
+            result.append('\n');
         }
+
+        System.out.print(result);
 
         scanner.close();
     }
