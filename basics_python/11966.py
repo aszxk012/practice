@@ -17,3 +17,12 @@ if n != 1:
 
 else:
     print(1)
+
+# 비트 연산 이용하여 풀기(2023.07.29)
+
+n = int(input())
+
+if n > 0 and (n & (n - 1)) == 0:
+    print(1)
+else:
+    print(0)
