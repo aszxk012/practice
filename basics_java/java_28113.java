@@ -15,7 +15,7 @@ public class java_28113{
         int b = scanner.nextInt();
 
         int bus = a;
-        int subway = b;
+        int subway = (b - n) + b;
 
         if (bus > subway) {
             System.out.println("Subway");
