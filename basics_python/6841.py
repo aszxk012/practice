@@ -1,6 +1,6 @@
 # 6841
 # 각 단어에 해당하는 뜻 출력
-# 출력형식 오류 발생(2024.03.19)
+# 출력형식 오류 발생(2024.03.19, 20)
 
 dic = {"CU": "see you", ":-)": "I’m happy", ":-(": "I’m unhappy", ";-)": "wink",
        ":-P": "stick out my tongue", "(~.~)": "sleepy", "TA": "	totally awesome",
@@ -8,13 +8,12 @@ dic = {"CU": "see you", ":-)": "I’m happy", ":-(": "I’m unhappy", ";-)": "wi
        "YW": "you’re welcome", "TTYL": "talk to you later"}
 
 while True:
-    try:
-        string = input()
+    string = input()
         
-        if (string in dic):
-            print(dic[string])
-        else:
-            print(string)
+    if (string in dic):
+        print(dic[string])
+    else:
+        print(string)
 
-    except EOFError:
+    if (string == "TTYL"):
         break
