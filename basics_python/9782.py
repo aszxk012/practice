@@ -4,10 +4,11 @@
 # n이 짝수인 경우 n / 2번째 데이터와 (n / 2) + 1번째 데이터의 평균이다.
 # 중앙값을 출력
 # 런타임 오류(2024.01.20, 21, 02.13, 03.11, 03.30)
+# split(' ') > split()으로 변경 후 해결(2024.04.12)
 
 i = 1
 while True:
-    num_list = list(map(int, input().split(' ')))
+    num_list = list(map(int, input().split()))
     if (num_list[0] == 0):
         break
     
@@ -21,12 +22,3 @@ while True:
 
     print("Case %d: %.1f" % (i, median))
     i += 1
-
-# -----------------------------------
-T = 0
-while True :
-    data = [*map(int, input().split())]
-    if data[0] == 0 : break
-    T += 1
-    N, D = data[0], data[1:]
-    print("Case %d: %.1f" %( T, D[(N + 1) // 2 - 1] if N % 2 else (D[N // 2 - 1] + D[(N // 2)]) / 2) )
