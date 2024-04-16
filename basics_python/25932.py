@@ -5,7 +5,7 @@
 # Mack이 18번 저지를 입고 Zack이 17번 저지를 입는다고 가정할 때
 # 쌍둥이 중 몇 명이 있는지를 나타내는 네 가지 메시지(mack, zack, both, none) 중 하나 출력
 # 출력 후 한 줄 띄우기
-# 둘 다 있는 both 출력 불가능(2024.04.15)
+# 둘 다 있는 both 출력 불가능(2024.04.15) > if문 순서 바꿔서 해결(2024.04.16)
 
 n = int(input())
 zack, mack = 17, 18
@@ -16,14 +16,14 @@ for _ in range(n):
     
     print(string)
     
-    if (zack in players):
+    if (zack in players) and (mack in players):
+        print("both")
+    
+    elif (zack in players):
         print("zack")
     
     elif (mack in players):
         print("mack")
-    
-    elif ((zack in players) and (mack in players)):
-        print("both")
     
     else:
         print("none")
