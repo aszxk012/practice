@@ -7,11 +7,18 @@
 
 n = int(input())
 board = []
+max_num = 0
 
 # board에 숫자 넣기
 for _ in range(n):
     nums = list(map(int, input().split(' ')))
+    nums_max = max(nums)
+    if (max_num < nums_max):
+        max_num = nums_max
     board.append(nums)
 
 # 이동하려고 하는 쪽의 칸 먼저 합쳐짐
 # 2 \n 2 \n 2 상태에서 ↑ 누르면 4 \n 2
+
+def transfer(board):
+    pass
